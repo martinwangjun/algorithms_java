@@ -2,11 +2,11 @@ package sort;
 
 import org.junit.Test;
 
-public class SelectionSortTest {
+public class InsertionSortTest {
     @Test
     public void test() {
-        int [] arr = {1, 4, 6, 9, 7, 2, 3, 5, 8, 0};
-        Sort sortor = new SelectionSort();
+        int [] arr = {1, 4, 6, 9, 7, 2, 3, 5, 8, 10};
+        Sort sortor = new InsertionSort();
         sortor.sort(arr);
         sortor.list(arr);
     }

@@ -1,6 +1,6 @@
 package sort;
 
-public class BubbleSort {
+public class BubbleSort implements Sort{
     public void sort(int [] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < i; j++) {
