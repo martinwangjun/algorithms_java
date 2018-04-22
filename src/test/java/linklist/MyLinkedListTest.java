@@ -1,8 +1,9 @@
-package linkedlist;
+package linklist;
 
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import linklist.MyLinkedList;
 
 public class MyLinkedListTest {
     @Test

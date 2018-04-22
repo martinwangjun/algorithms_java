@@ -44,8 +44,15 @@
 
 - 冒泡法排序: `sort/BubbleSort.java`
 - 选择法排序: `sort/SelectionSort.java`
+- 插入法排序: `sort/InsertionSort.java`
+- 快速排序: `sort/QuickSort.java`
 
 ## 插入排序
+
+
+
+
+
 
 ## 希尔排序
 

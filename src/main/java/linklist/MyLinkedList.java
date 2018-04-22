@@ -1,4 +1,4 @@
-package linkedlist;
+package linklist;
 
 /**
  * 链表的实现
