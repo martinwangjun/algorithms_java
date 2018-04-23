@@ -9,4 +9,8 @@ public class QuickSort extends Sort {
         
     }
     
+    private void sort(int[] unsorted, int low, int high) {
+        
+    }
+    
 }

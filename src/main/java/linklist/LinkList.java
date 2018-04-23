@@ -20,8 +20,6 @@ public class LinkList {
         Node temp = new Node(d);
         temp.next = head;
         head = temp;
-        LOGGER.info(temp);
-        LOGGER.info(head);
     }
     
     /**
@@ -63,6 +61,39 @@ public class LinkList {
     }
     
     /**
+     * 按照指定的位置，获取Node
+     * 
+     * @param index
+     */
+    public Node getNode(int index) {
+        int postion = 0;
+        Node temp = head;
+        while(temp != null) {
+            if(index == postion) {
+                return temp;
+            }
+            postion++;
+            temp = temp.next;
+        }
+        return null;
+    }
+    
+    public int getNodeByValue(int value) {
+        Node temp = head;
+        int position = 0;
+        while(temp != null) {
+            // 如果不是基本数据类型，则需要使用.equals方法来判断
+            if(temp.data == value) {
+                return position;
+            }
+            position++;
+            temp = temp.next;
+        }
+        return -1;
+    }
+    
+    
+    /**
      * 删除指定的节点，从0开始算
      */
     public void deleteNode(int index) {
@@ -75,6 +106,9 @@ public class LinkList {
         }
         
     }
+    
+    
+    
     
     /**
      * 列出所有的节点
