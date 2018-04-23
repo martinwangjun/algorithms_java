@@ -8,7 +8,17 @@ package sort;
  * @author martin.wang
  *
  */
-public interface Sort {
-    void sort(int [] arr);
-    void list(int [] arr);
+public abstract class Sort {
+    public abstract void sort(int [] arr);
+    
+    public void list(int [] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (i < arr.length - 1) {
+                System.out.print(arr[i] + " -> ");
+            } else {
+                System.out.print(arr[i]);
+            }
+        }
+        System.out.println();
+    }
 }

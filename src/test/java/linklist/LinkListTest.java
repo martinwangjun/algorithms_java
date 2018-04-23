@@ -16,6 +16,12 @@ public class LinkListTest {
         list.insertNode(4);
         list.listNodes();
         TestCase.assertEquals(5, list.length());
+        
+        System.out.println("--------------------------");
+        
+        list.insertNode(22, 100);
+        list.insertNode(0, 200);
+        list.listNodes();
     }
     
     

@@ -9,6 +9,11 @@ public class LinkList {
     /**
      * 插入新的节点
      * 
+     * 对于链表来说，插入新的节点，可以又头插入和尾插入。这里的实现使用的是头插入方式。
+     * 
+     * 头插入方式：O(1)
+     * 尾插入方式：O(N)
+     * 
      * @param d
      */
     public void insertNode(int d) {
@@ -22,16 +27,20 @@ public class LinkList {
     /**
      * 在指定位置插入Node
      * 
+     * 在指定位置插入一个节点
+     * 
+     * O(N)
+     * 
      * @param index
      * @param d
      */
     public void insertNode(int index, int d) {
-        if(index < 0 || index > this.length() - 1) {
-            LOGGER.info("Index: " + index + " illegal.");
+        if (length() == 0) {
+            insertNode(d);
             return;
         }
-        if (index == 0) {
-            insertNode(d);
+        if(index < 0 || index > this.length() - 1) {
+            LOGGER.info("Index: " + index + " illegal.");
             return;
         }
         Node temp = head;
@@ -45,6 +54,11 @@ public class LinkList {
             }
             temp = temp.next;
             currentPostion++;
+        }
+        if(currentPostion == length() - 1) {
+            Node node = new Node(d);
+            node.next = temp.next;
+            temp.next = node;
         }
     }
     
